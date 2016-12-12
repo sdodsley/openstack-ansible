@@ -146,6 +146,6 @@ storage_hosts:
           volume_driver: cinder.volume.drivers.pure.PureISCSIDriver
           volume_backend_name: Pure_iSCSI
           san_ip: "172.29.244.13"
-          api_token: ""
+          api_token: "902fdca3-7e3f-d2e4-d6a6-24c2285fe1d9"
           use_chap_auth: True
           use_multipath_for_image_xfer: True
