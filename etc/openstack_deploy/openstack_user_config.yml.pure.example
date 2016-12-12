@@ -129,11 +129,10 @@ network_hosts:
 compute_hosts:
   compute1:
     ip: 172.29.236.12
-    container_vars:
-      nova_backends:
-       limit_container_types: nova_compute
-       libvirt:
-         iscsi_use_multipath: True
+    host_vars:
+      nova_nova_conf_overrides:
+        libvirt:
+          iscsi_use_multipath: true
 
 # cinder storage host (Pure Storage FlashArray-backed)
 storage_hosts:
@@ -147,5 +146,5 @@ storage_hosts:
           volume_backend_name: Pure_iSCSI
           san_ip: "172.29.244.13"
           api_token: "902fdca3-7e3f-d2e4-d6a6-24c2285fe1d9"
-          use_chap_auth: True
-          use_multipath_for_image_xfer: True
+          use_chap_auth: true
+          use_multipath_for_image_xfer: true
